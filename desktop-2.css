@@ -1,0 +1,464 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif; }
+
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(25, 22, 57, 0.87);
+  z-index: 3; }
+  .modal-wrapper .modal-window-more {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    padding: 20px 45px 20px 20px;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 4; }
+    .modal-wrapper .modal-window-more .modal-window-more__header {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: start;
+      margin-bottom: 50px; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__main-img {
+        width: 370px;
+        height: 246px;
+        -webkit-filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
+        border-radius: 10px;
+        margin-bottom: 8px; }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__main-img > img {
+          width: 100%;
+          height: 100%;
+          border-radius: inherit; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__addit-imgs {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__addit-imgs .addit-imgs__item {
+          position: relative;
+          width: 72px;
+          height: 52px;
+          margin-right: 6px;
+          border-radius: 10px; }
+          .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__addit-imgs .addit-imgs__item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: -webkit-gradient(linear, left top, left bottom, from(#191639), to(rgba(25, 22, 57, 0.06)));
+            background: -webkit-linear-gradient(top, #191639 0%, rgba(25, 22, 57, 0.06) 100%);
+            background: -o-linear-gradient(top, #191639 0%, rgba(25, 22, 57, 0.06) 100%);
+            background: linear-gradient(180deg, #191639 0%, rgba(25, 22, 57, 0.06) 100%);
+            -webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+            border-radius: inherit; }
+          .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__addit-imgs .addit-imgs__item > img {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info {
+        padding-top: 27px; }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-price-title {
+          position: relative;
+          display: inline-block;
+          margin-bottom: 10px;
+          padding-left: 40px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 16px;
+          text-transform: uppercase;
+          color: #191639; }
+          .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-price-title::after {
+            content: "";
+            position: absolute;
+            left: calc(100% + 17px);
+            top: 7.5px;
+            width: 95px;
+            height: 1px;
+            background-color: rgba(25, 22, 57, 0.1); }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-price {
+          width: 200px;
+          height: 56px;
+          margin-bottom: 22px;
+          background-color: #F8F9FB;
+          border-radius: 0px 10px 10px 0px;
+          text-align: center;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 24px;
+          line-height: 56px;
+          text-transform: uppercase;
+          color: #191639; }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-descr-title {
+          position: relative;
+          display: inline-block;
+          margin-bottom: 13px;
+          padding-left: 40px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 16px;
+          text-transform: uppercase;
+          color: #191639; }
+          .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-descr-title::after {
+            content: "";
+            position: absolute;
+            left: calc(100% + 18px);
+            top: 7.5px;
+            width: 56px;
+            height: 1px;
+            background-color: rgba(25, 22, 57, 0.1); }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-text {
+          margin: 0;
+          padding-left: 40px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+          color: #191639; }
+    .modal-wrapper .modal-window-more .modal-window__pay {
+      padding: 0 0 0 25px; }
+      .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 36px; }
+        .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method {
+          position: relative;
+          margin-bottom: 16px; }
+          .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method .pay-method__title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 9px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #191639; }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method .pay-method__title::after {
+              content: "";
+              position: absolute;
+              left: calc(100% + 10px);
+              top: 7.5px;
+              width: 114px;
+              height: 1px;
+              background-color: rgba(25, 22, 57, 0.1); }
+          .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method .pay-method__select {
+            display: block;
+            width: 320px;
+            height: 50px;
+            padding-left: 63px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: #191639;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            cursor: pointer; }
+          .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method .pay-method__label {
+            position: absolute;
+            top: 36px;
+            left: 18px; }
+        .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email {
+          margin-bottom: 16px; }
+          .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 9px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #191639; }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__title::after {
+              content: "";
+              position: absolute;
+              left: calc(100% + 9px);
+              top: 7.5px;
+              width: 90px;
+              height: 1px;
+              background-color: rgba(25, 22, 57, 0.1); }
+          .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__input {
+            display: block;
+            width: 320px;
+            height: 50px;
+            padding: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            outline: none; }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__input::-webkit-input-placeholder {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 16px;
+              color: rgba(25, 22, 57, 0.1); }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__input:-ms-input-placeholder {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 16px;
+              color: rgba(25, 22, 57, 0.1); }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__input::-ms-input-placeholder {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 16px;
+              color: rgba(25, 22, 57, 0.1); }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__input::placeholder {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 16px;
+              color: rgba(25, 22, 57, 0.1); }
+        .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms {
+          line-height: 16px; }
+          .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms .pay-terms__checkbox {
+            display: none; }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms .pay-terms__checkbox + label {
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              margin-right: 13px;
+              background: #FFFFFF;
+              text-align: center;
+              border: 1px solid rgba(0, 0, 0, 0.05); }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms .pay-terms__checkbox:checked + label {
+              position: relative; }
+              .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms .pay-terms__checkbox:checked + label::before {
+                content: '✔';
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 14px;
+                line-height: 14px;
+                color: #191639; }
+          .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms .pay-terms__text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: #191639; }
+            .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms .pay-terms__text > a {
+              color: #235094;
+              text-decoration: none; }
+        .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-button {
+          display: block;
+          width: 320px;
+          height: 50px;
+          background-color: #5CCA7B;
+          font-family: "Roboto", sans-serif;
+          text-align: center;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF;
+          border: none;
+          outline: none;
+          cursor: pointer; }
+      .modal-wrapper .modal-window-more .modal-window__pay .modal-window__button-close {
+        display: block;
+        width: 90px;
+        margin: 0 auto;
+        padding-top: 11px;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #191639;
+        background-color: transparent;
+        border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        outline: none; }
+    .modal-wrapper .modal-window-more .modal-window__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer; }
+
+@media (max-width: 810px) {
+  .modal-wrapper .modal-window-more {
+    margin: 10px;
+    padding: 15px; }
+    .modal-wrapper .modal-window-more .modal-window-more__header {
+      margin-bottom: 20px; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__main-img {
+        width: 250px;
+        height: 170px; }
+    .modal-wrapper .modal-window-more .modal-window__pay {
+      padding-left: 0; } }
+
+@media (max-width: 700px) {
+  .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms {
+      margin-bottom: 10px; } }
+
+@media (max-width: 600px) {
+  .modal-wrapper .modal-window-more {
+    padding: 6px; }
+    .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__main-img {
+      width: 200px;
+      height: 130px; }
+    .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__addit-imgs .addit-imgs__item {
+      width: 50px;
+      height: 38px; }
+    .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info {
+      padding-top: 10px; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-price-title {
+        padding-left: 14px; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-price {
+        width: 164px;
+        height: 40px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 40px; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-descr-title {
+        margin-bottom: 8px;
+        padding-left: 14px; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-text {
+        padding-left: 14px; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form {
+      margin-bottom: 10px; }
+      .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method {
+        margin-bottom: 8px; }
+      .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email {
+        margin-bottom: 8px; }
+      .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms {
+        margin-bottom: 10px; } }
+
+@media (max-width: 520px) {
+  .modal-wrapper .modal-window-more .modal-window-more__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 10px; }
+    .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__main-img {
+        width: 250px;
+        height: 170px;
+        margin-right: 8px; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__addit-imgs {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__addit-imgs .addit-imgs__item {
+          width: 50px;
+          height: 38px;
+          margin-bottom: 8px; }
+    .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info {
+      padding-top: 0; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-price-title {
+        margin-right: 8px;
+        padding-left: 0; }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-price-title::after {
+          display: none; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-price {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        line-height: 22px;
+        font-size: 18px; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-descr-title {
+        display: block;
+        margin-bottom: 8px;
+        padding-left: 0; }
+        .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-descr-title::after {
+          display: none; }
+      .modal-wrapper .modal-window-more .modal-window-more__header .more-header__info .header__info-text {
+        padding-left: 0; } }
+
+@media (max-width: 390px) {
+  .modal-wrapper .modal-window-more {
+    padding: 10px; }
+    .modal-wrapper .modal-window-more .modal-window-more__header .more-header__imgs .more-header__main-img {
+      width: 190px;
+      height: 130px; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method .pay-method__title::after {
+      display: none; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method .pay-method__label {
+      top: 32px; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-method .pay-method__select {
+      width: 100%;
+      height: 40px; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__title::after {
+      display: none; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-email .pay-email__input {
+      width: 100%;
+      height: 40px; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms {
+      width: 100%; }
+      .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms .pay-terms__checkbox + label {
+        margin-right: 4px; }
+      .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-terms .pay-terms__text {
+        font-size: 13px; }
+    .modal-wrapper .modal-window-more .modal-window__pay .modal-window__form .pay-button {
+      width: 100%;
+      height: 40px;
+      line-height: 40px; } }

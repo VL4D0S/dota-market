@@ -1,0 +1,1234 @@
+$main-color: #191639;
+$main-text-color: #FFFFFF;
+$main-bg-color: #FFFFFF;
+$font: 'Roboto', sans-serif;
+$header-vector: url(img/header-vector.png);
+$accounts-bg-1: url(img/accounts-bg-1.png);
+$accounts-bg-2: url(img/accounts-bg-2.png);
+$warranty-bg: url(img/warranty-bg.jpg);
+$reviews-bg: url(img/reviews-bg.png);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: $font;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+    background: $main-color $header-vector;
+    background-repeat: no-repeat;
+
+    .header-container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+
+        .header-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .header-name {
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 40px;
+                text-transform: uppercase;
+                color: $main-text-color;
+            }
+
+            .header-content {
+                display: flex;
+
+                .header-nav {
+                    display: block;
+
+                    .header-menu {
+                        list-style-type: none;
+                        margin: 0;
+                        
+                        .header-menu__item {
+                            display: inline;
+                            margin-right: 38px;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 18px;
+                            line-height: 40px;
+                            color: $main-text-color;
+                            text-transform: uppercase;
+
+                            &:last-child {
+                                margin-right: 50px;
+                            }
+
+                            &.active {
+                                position: relative;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 28px;
+                                    width: 100%;
+                                    height: 3px;
+                                    background-color: #3E3697;
+                                    box-shadow: 0px 0px 4px rgba(46, 41, 99, 0.25);
+                                }
+                            }
+
+                            > a {
+                                color: inherit;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+
+                .lang-select {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    padding-left: 8px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    color: $main-text-color;
+                    background-color: transparent;
+                    appearance: none;
+                    outline: none;
+                    cursor: pointer;
+                
+                    option {
+                        background-color: $main-color;
+                    }
+                }
+                .header-hide__menu {
+                    margin-left: 25px;
+
+                    .header-hide__content-menu {
+                        display: none;
+                        cursor: pointer;
+    
+                        &.active {
+                            display: block;
+                        }
+
+                        .header-hide__menu-item1 {
+                            width: 34px;
+                            height: 4px;
+                            margin-bottom: 8px;
+                            background-color: rgb(255, 255, 255);
+                            transition: all 0.5s ease-in-out;
+        
+                            &.active {
+                                margin-top: 7px;
+                                margin-left: 10px;
+                                transform: rotate(45deg);
+                            }
+                        }
+                        
+                        .header-hide__menu-item2 {
+                            width: 24px;
+                            height: 4px;
+                            background-color: rgb(255, 255, 255);
+                            transition: all 0.5s ease-in-out;
+        
+                            &.active {
+                                width: 34px;
+                                margin-top: -11px;
+                                margin-left: 10px;
+                                transform: rotate(-45deg);
+                            }
+                        }
+                    }
+                }  
+            }
+        }   
+    }
+    .header-adavtive__block {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: $main-color;
+
+        &.active {
+            display: block;
+        }
+
+        .header-adavtive__nav {
+
+            .header-adavtive__menu {
+                padding: 0;
+                text-align: center;
+                list-style-type: none;
+
+                .header-menu__item {
+                    width: 120px;
+                    margin: 0 auto;
+                    padding: 8px 0;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    
+                    > a {
+                        color: $main-text-color;
+                        text-decoration: none;
+                    }
+
+                    &.active {
+                        border-bottom: 2px solid #3E3697;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main {
+    width: 100%;
+
+    .main-container {
+        width: 100%;
+        max-width: 1205px;
+        margin: 0 auto;            
+    }
+
+    .section-title {
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        margin: 0 0 22px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: $main-color;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: calc(100% + 34px);
+            top: 16px;
+            width: 250px;
+            height: 10px;
+            background-color: $main-color;
+        }
+
+        &.white {
+            color: $main-text-color;
+
+            &::after {
+                background-color: $main-text-color;
+            }
+        }
+    }
+    
+    .accounts-section {
+        width: 100%;
+        padding: 107px 10px 67px;
+        background: $accounts-bg-1 top left,
+                    $accounts-bg-2 bottom right;
+        background-color: $main-bg-color;
+        background-repeat: no-repeat;
+
+        .section-accounts {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            .section-account {
+                width: 382px;
+                background-color: $main-bg-color;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                margin-bottom: 30px;
+
+                .section-account__header {
+                    position: relative;
+                    width: 100%;
+                    height: 200px;
+
+                    .section-account__img {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px 10px 0px 0px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(294.68deg, rgba(0, 0, 0, 0.72) 0%, 
+                            rgba(0, 0, 0, 0.22) 77.7%);
+                            border-radius: inherit;
+                        }
+
+                        > img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: inherit;
+                        }
+                    }
+
+                    .section-account__price {
+                        text-align: right;
+                        position: absolute;
+                        right: 19px;
+                        bottom: 11px;
+
+                        .account-price__title {
+                            position: relative;
+                            display: inline-block;
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 14px;
+                            line-height: 16px;
+                            letter-spacing: .7px;
+                            text-transform: uppercase;
+                            color: $main-text-color;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                right: calc(100% + 14px);
+                                top: 6px;
+                                width: 52px;
+                                height: 1px;
+                                background: $main-bg-color;
+                                opacity: 0.1;
+                            }
+                        }
+
+                        .account-price__num {
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 36px;
+                            line-height: 38px;
+                            text-transform: uppercase;
+                            color: $main-text-color;
+
+                            > span {
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 24px;
+                                line-height: 28px;
+                                text-transform: uppercase;
+                                color: inherit;
+                            }
+                        }
+                    }
+                }
+
+                .section-account__content {
+                    padding: 25px;
+
+                    .section-account__descr {
+                        margin-bottom: 46px;
+
+                        .account-descr__title {
+                            padding-bottom: 5px;
+                            margin-bottom: 10px;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 16px;
+                            text-transform: uppercase;
+                            color: $main-color;
+                            border-bottom: 1px solid rgba(25, 22, 57, 0.1);
+                        }
+
+                        .account-descr__text {
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: $main-color;
+
+                            > p {
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .section-account__buttons {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .account-button__buy {
+                            font-family: $font;
+                            display: block;
+                            width: 230px;
+                            height: 44px;
+                            background: $main-color;
+                            border-radius: 10px;
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 14px;
+                            line-height: 44px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: $main-text-color;
+                            outline: none;
+                            border: none;
+                            cursor: pointer;
+                        }
+
+                        .account-link__more {
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 14px;
+                            text-transform: uppercase;
+                            color: rgba(25, 22, 57, 0.3);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-load-more {
+            font-family: $font;
+            display: block;
+            position: relative;
+            width: 210px;
+            height: 50px;
+            margin: 5px auto 0;
+            background-color: $main-color;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding-left: 40px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 50px;
+            text-transform: uppercase;
+            color: $main-text-color;
+            outline: none;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 162px;
+                top: 16px;
+                background-image: url(icon/load-more.svg);
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    .warranty-section {
+        width: 100%;
+        padding: 80px 10px 110px;
+        background-image: $warranty-bg;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        .main-container {
+
+            .warranty-wrapper {
+                width: 100%;
+                max-width: 1103px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 105px auto 67px;
+
+                .warranty-item {
+                    display: flex;
+                    align-items: center;
+
+                    .warranty-item__icon {
+                        margin-right: 20px;
+
+                        &.safety {
+                            margin-right: 11px;
+                        }
+                    }
+
+                    .warranty-item__text {
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 24px;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        color: $main-text-color;
+                    }
+                }
+            }
+
+            .warranty-button {
+                display: block;
+                width: 210px;
+                height: 50px;
+                margin: 0 auto;
+                font-family: $font;
+                text-align: center;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                box-sizing: border-box;
+                filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+                border-radius: 10px;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 50px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $main-text-color;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+
+    .reviews-section {
+        width: 100%;
+        padding: 67px 10px 78px;
+        background: $main-bg-color $reviews-bg;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+
+        .reviews-wrapper {
+            width: 100%;
+            max-width: 1050px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: start;
+            margin: 46px 0 5px;
+
+            .reviews-item {
+                width: 330px;
+                background-color: $main-bg-color;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                padding: 20px 20px 17px;
+                margin-bottom: 38px;
+
+                .reviews-item__header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-bottom: 11px;
+                    margin-bottom: 9px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+                    .reviews-item__title {
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-transform: uppercase;
+                        color: $main-color;
+                    }
+
+                    .reviews-item__date {
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-align: right;
+                        text-transform: uppercase;
+                        color: rgba(25, 22, 57, 0.2);
+                    }
+                }
+
+                .reviews-item__text {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: rgba(25, 22, 57, 0.5);
+                }
+            }
+        }
+
+        .reviews-pagination {
+            width: 130px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 43px;
+
+            .reviews-pagination__arrow {
+                padding-top: 3px;
+                cursor: pointer;
+
+                &.inverted {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            .reviews-pagination__wrapper {
+                display: flex;
+
+                .reviews-pagination__item {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: rgba(25, 22, 57, 0.3);
+                    margin-right: 8px;
+                    cursor: pointer;
+
+                    &.active {
+                        color: $main-color;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .reviews-form {
+            position: relative;
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            height: 90px;
+
+            .reviews-input {
+                width: 100%;
+                max-width: 700px;
+                height: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                padding: 37px 32px;
+                outline: none;
+
+                &::placeholder {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: rgba(25, 22, 57, 0.3);
+                }
+
+                &:disabled {
+                        
+                    + label {
+                        display: block;
+                    }
+                }
+            }
+
+            label{
+                display: none;
+                position: absolute;
+                right: 123px;
+                top: 25px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .reviews-button {
+                display: block;
+                width: 100px;
+                height: 90px;
+                padding-top: 5px;
+                padding-right: 8px;
+                background: #191639;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                cursor: pointer;
+
+                &:disabled {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 312px;
+    padding: 70px 10px 0;
+    background-color: $main-color;
+
+    .footer-container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+
+        .footer-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+
+            .footer-info {
+                
+                .footer-info__name {
+                    margin-bottom: 15px;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-transform: uppercase;
+                    color: $main-text-color;
+                }
+
+                .footer-info__link {
+                    margin-bottom: 14px;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    cursor: pointer;
+                    
+                    > a {
+                        color: $main-text-color;
+                        text-decoration: none;
+                    }
+                }
+
+                .footer-info__copy {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: rgba(255, 255, 255, 0.15);
+                }
+            }
+
+            .footer-contact {
+
+                .footer-contact__title {
+                    margin-bottom: 27px;
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-transform: uppercase;
+                    color: $main-text-color;
+                }
+
+                .footer-contact__links {
+                    width: 170px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    > a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .footer-content {
+                text-align: right;
+
+                .footer-nav {
+
+                    .footer-menu {
+                        margin: 0;
+                        list-style-type: none;
+
+                        .footer-menu__item {
+                            margin-bottom: 19px;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 18px;
+                            line-height: 21px;
+                            text-align: right;
+                            text-transform: uppercase;
+
+                            > a {
+                                text-decoration: none;
+                                color: $main-text-color;
+                            }
+                        }
+                    }
+                }
+
+                .footer-lang-select {
+                    width: 40px;
+                    height: 40px;
+                    padding-left: 8px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    color: $main-text-color;
+                    background-color: transparent;
+                    appearance: none;
+                    outline: none;
+                    cursor: pointer;
+
+                    option {
+                        background-color: $main-color;                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .main {
+
+        .warranty-section {
+            background-size: auto;
+        }
+    }
+}
+
+@media (max-width: 1166px) {
+    .main {
+
+        .accounts-section {
+            
+            .main-container {
+
+                .accounts-section__wrapper {
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1010px) {
+    .main {
+
+        .reviews-section {
+            
+            .main-container {
+
+                .reviews-wrapper {
+                    width: 100%;
+                    max-width: 700px;
+                    margin: 0 auto;
+
+                    .reviews-item {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .reviews-pagination {
+                    margin: 0 auto;
+                    margin-bottom: 43px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    .main {
+
+        .warranty-section {
+            padding: 20px 10px 25px;
+
+            .main-container {
+
+                .warranty-wrapper {
+                    margin: 0 auto;
+                    flex-direction: column;
+
+                    .warranty-item {
+                        width: 320px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .main {
+
+        .reviews-section {
+            
+            .main-container {
+
+                .section-title {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 794px) {
+    .main {
+
+        .accounts-section {
+            padding-top: 30px;
+            
+            .main-container {
+
+                .accounts-section__wrapper {
+                    max-width: 380px;
+                    margin: 0 auto;
+
+                    .section-title {
+                        font-size: 30px;
+
+                        &::after {
+                            width: 180px;
+                        }
+                    }
+                    
+                    .section-accounts {
+                        flex-direction: column;
+
+                        .section-account {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .reviews-section {
+            background: $main-bg-color;
+            
+            .main-container {
+
+                .section-title {
+                    display: block;
+                    text-align: center;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                .reviews-form {
+                    width: 70%;
+                    margin: 0 auto;
+
+                    .reviews-input {
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+
+        .header-container {
+
+            .header-wrapper {
+
+                .header-content {
+
+                    .header-nav {
+                        
+                        .header-menu {
+
+                            .header-menu__item {
+                                margin-right: 10px;
+
+                                &:last-child {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+
+        .reviews-section {
+            background: $main-bg-color;
+            padding-top: 15px;
+            
+            .main-container {
+
+                .section-title {
+                    padding: 0 15px;
+                    font-size: 28px;
+                }
+
+                .reviews-wrapper {
+                    flex-direction: column;
+                    max-width: 330px;
+                    margin: 0 auto;
+
+                    .reviews-item {
+                        width: 100%;
+                    }
+                }
+
+                .reviews-form {
+                    flex-direction: column;
+
+                    .reviews-input {
+                        height: 40px;
+                        
+                        &::placeholder {
+                            font-size: 10px;
+                        }
+                    }
+
+                    > label {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    .reviews-button {
+                        width: 100%;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .main {
+
+        .warranty-section {
+
+            .main-container {
+
+                .section-title {
+
+                    &.white {
+                        display: block;
+                        text-align: center;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+
+    .footer {
+        height: auto;
+        padding: 20px 0;
+        
+        .footer-container {
+
+            .footer-wrapper {
+                max-width: 80%;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: 0 auto;
+
+                .footer-info {
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                }
+
+                .footer-contact {
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                }
+
+                .footer-content {
+                    margin: 0 auto;
+                    text-align: center;
+
+                    .footer-nav {
+
+                        .footer-menu {
+                            padding: 0;
+
+                            .footer-menu__item {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 80px;
+        padding: 20px 15px;
+        z-index: 5;
+
+        .header-container {
+
+            .header-wrapper {
+                .header-name {
+                    line-height: 43px;
+                }
+
+                .header-content {
+                    align-items: center;
+
+                    .header-nav {
+                        
+                        .header-menu {
+
+                            .header-menu__item {
+                                line-height: 43px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 530px) {
+    .header {
+
+        .header-container {
+
+            .header-wrapper {
+
+                .header-content {
+
+                    .header-nav {
+                        display: none;
+                        
+                        .header-menu {
+
+                            .header-menu__item {
+                                line-height: 43px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .header-hide__menu {
+
+                        .header-hide__content-menu {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .main {
+
+        .reviews-section {
+            
+            .main-container {
+
+                .reviews-form {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .main {
+
+        .accounts-section {
+            
+            .main-container {
+
+                .accounts-section__wrapper {
+
+                    .section-title {
+                        display: block;
+                        text-align: center;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    
+                    .section-accounts {
+
+                        .section-account {
+                            
+                            .section-account__content {
+
+                                .section-account__descr {
+                                    margin-bottom: 20px;
+                                }
+
+                                .section-account__buttons {
+
+                                    .account-button__buy {
+                                        width: 160px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .warranty-section {
+
+            .main-container {
+
+                .section-title {
+
+                    &.white {
+                        font-size: 30px;
+                    }
+                }
+
+                .warranty-wrapper {
+
+                    .warranty-item {
+                        padding: 0 10px;
+
+                        .warranty-item__icon {
+                            margin-right: 8px;
+                        }
+
+                        .warranty-item__text {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

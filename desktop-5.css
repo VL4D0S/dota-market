@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif; }
+
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(25, 22, 57, 0.87);
+  z-index: 3; }
+  .modal-wrapper .modal-window-how {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    width: 750px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px 63px 37px 45px; }
+    .modal-wrapper .modal-window-how .modal-window-how__title {
+      display: block;
+      margin: 0;
+      margin-bottom: 35px;
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: #191639; }
+    .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item {
+      position: relative;
+      margin-bottom: 26px;
+      padding: 28px 16px 33px 36px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 10px; }
+      .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item:last-child {
+        margin-bottom: 31px; }
+      .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item .window-how-item__title {
+        margin: 0;
+        margin-bottom: 10px;
+        text-align: left;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #191639; }
+      .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item .window-how-item__text {
+        margin: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #191639; }
+      .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item .window-how-item__number {
+        position: absolute;
+        right: 0;
+        top: -36px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 112px;
+        color: rgba(25, 22, 57, 0.04); }
+    .modal-wrapper .modal-window-how .modal-window-regulations__button {
+      display: block;
+      width: 170px;
+      height: 46px;
+      margin: 0 auto;
+      background-color: transparent;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: rgba(25, 22, 57, 0.5);
+      cursor: pointer;
+      outline: none; }
+    .modal-wrapper .modal-window-how .modal-window__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer; }
+
+@media (max-width: 800px) {
+  .modal-wrapper .modal-window-how {
+    margin: 10px;
+    padding: 20px; }
+    .modal-wrapper .modal-window-how .modal-window-how__title {
+      margin-bottom: 15px; }
+    .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item {
+      padding: 20px; } }
+
+@media (max-width: 380px) {
+  .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item {
+    margin-bottom: 15px; }
+    .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item:last-child {
+      margin-bottom: 20px; }
+    .modal-wrapper .modal-window-how .modal-window-how__content .modal-window-how__item .window-how-item__text {
+      font-size: 13px; } }

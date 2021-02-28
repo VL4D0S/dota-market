@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./desktop-2.css">
+    <title>Desktop-2</title>
+</head>
+<body>
+    <div class="modal-wrapper">
+        <div class="modal-window-more">
+            <div class="modal-window-more__header">
+                <div class="more-header__imgs">
+                    <div class="more-header__main-img">
+                        <img src="./img/more-img.jpg" alt="more-img">
+                    </div>
+                    <div class="more-header__addit-imgs">
+                        <div class="addit-imgs__item">
+                            <img src="./img/more-img.jpg" alt="more-img">
+                        </div>
+                        <div class="addit-imgs__item">
+                            <img src="./img/more-img.jpg" alt="more-img">
+                        </div>
+                        <div class="addit-imgs__item">
+                            <img src="./img/more-img.jpg" alt="more-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="more-header__info">
+                    <div class="header__info-price-title">
+                        Цена
+                    </div>
+                    <div class="header__info-price">
+                        1000 <span class="valute">руб.</span>
+                    </div>
+                    <div class="header__info-descr-title">
+                        Описание
+                    </div>
+                    <p class="header__info-text">
+                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+                        Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-window__pay">
+                <form action="" class="modal-window__form">
+                    <div class="pay-method">
+                        <div class="pay-method__title">
+                            Выберите способ оплаты
+                        </div>
+                        <label for="pay-method__select" class="pay-method__label">
+                            <img src="./icon/cart.svg" alt="cart">
+                        </label>
+                        <select class="pay-method__select" id="pay-method__select">
+                            <option value="cart">Банковская карта</option>
+                        </select>
+                    </div>
+                    <div class="pay-email">
+                        <div class="pay-email__title">
+                            Введите электронную почту
+                        </div>
+                        <input type="email" placeholder="example@gmail.com" class="pay-email__input">
+                    </div>
+                    <div class="pay-terms">
+                        <input type="checkbox" class="pay-terms__checkbox" id="pay-terms__checkbox">
+                        <label for="pay-terms__checkbox" class="pay-terms__label"></label>
+                        <span class="pay-terms__text">Я согласен с <a href="#">условиями использования</a></span>
+                    </div>
+                    <button class="pay-button">
+                        Перейти к оплате
+                    </button>
+                </form>
+                <button class="modal-window__button-close">Закрыть</button>
+            </div>
+            <div class="modal-window__close">
+                <img src="./icon/close.svg" alt="close">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
